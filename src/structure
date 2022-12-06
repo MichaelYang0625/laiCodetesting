@@ -1,0 +1,29 @@
+Chen Yang
+U12975231
+cheny123@bu.edu
+=========================================================
+ATM.java.java        --- be used to do operations of all kinds of accounts.
+Manager.java         --- Managers have "ID" and "NAME" and managers can get all kinds of records and costumers' information.
+
+Costumer.java        --- Costumers have "ID", "NAME", "PASSWORD" and "A LIST OF ACCOUNTS".
+                         They can CREAT & CLOSE ACCOUNTS; VIEW balance and transactions; ADD & WITHDRAW money;
+                         CHANGE their password and REQUEST loan.
+RichCostumer.java    --- A subclass of "Costumer", objects created by this class must contain at least $5000;
+                         Only RICH COSTUMERS can "BUY","SALE" and "VIEW" stocks.
+
+Account.java         --- A super class, every accounts have its "ID NUMBER", "TYPE" and "BALANCE & TRANSACTION LIST";
+                         In accounts, we can "ADD" & "REMOVE"  balance, and add transactions.
+LoanAccount.java     --- A subclass of Account.java, costumers can by loan.
+SecurityAccount.java --- A subclass of Account.java, only Rich costumers have this account, storing a list of their stocks,
+                         they can add stocks from stock market.
+SavingAccount.java   --- A subclass of Account.java, costumer can only "ADD" money through this account.
+CheckingAccount.java --- A subclass of Account.java, costumer can "ADD" and "WITHDRAW" money through this account.
+
+BalanceUnit.java     --- Contains balance of accounts, showing the CURRENCY TYPE, ID and AMOUNT.
+StockMarket.java     --- Rich costumers can add stocks from StockMarket, this class contains the information of "STOCK PRICE"
+                         and "STOCK NAME".
+StockRecord.java     --- A record of the "price(per)", "amount" and the "total value" of every time costumer buy stocks.
+
+Fee.java             --- Every fee has its "TYPE" and "RATE".
+Transaction.java     --- Costumers can make transactions, this operation has: "TIME", "AMOUNT", "ID", "SENDER", "RECEIVER", "FEE"
+TransRecord.java     --- Record the "Start & end time", "a list of transaction"
